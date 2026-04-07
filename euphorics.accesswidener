@@ -1,0 +1,9 @@
+accessWidener	v1	intermediary
+accessible	method	net/minecraft/client/particle/BlockLeakParticle$Falling	<init>	(Lnet/minecraft/client/world/ClientWorld;DDDLnet/minecraft/fluid/Fluid;I)V
+accessible	method	net/minecraft/entity/FallingBlockEntity	<init>	(Lnet/minecraft/world/World;DDDLnet/minecraft/block/BlockState;)V
+accessible	field	net/minecraft/client/particle/Particle	gravityStrength	F
+accessible	field	net/minecraft/entity/ai/goal/SwimGoal	mob	Lnet/minecraft/entity/mob/MobEntity;
+accessible	class	net/minecraft/block/SculkVeinBlock$SculkVeinGrowChecker
+accessible	class	net/minecraft/client/gui/hud/InGameHud$HeartType
+accessible	class	net/minecraft/entity/mob/SpellcastingIllagerEntity$CastSpellGoal
+accessible	class	net/minecraft/entity/mob/SpellcastingIllagerEntity$LookAtTargetGoal

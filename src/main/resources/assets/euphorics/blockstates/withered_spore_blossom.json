@@ -1,0 +1,17 @@
+{
+  "variants": 
+  {
+    "wither=0": {
+      "model": "minecraft:block/spore_blossom"
+    },
+    "wither=1": {
+      "model": "euphorics:block/spore_blossom_wither1"
+    },
+    "wither=2": {
+      "model": "euphorics:block/spore_blossom_wither2"
+    },
+    "wither=3": {
+      "model": "euphorics:block/spore_blossom_wither3"
+    }
+  }
+}

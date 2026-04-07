@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="jars">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/META-INF/jars/joml-1.10.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/META-INF/jars/cardinal-components-base-5.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/META-INF/jars/satin-1.9.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/META-INF/jars/cardinal-components-entity-5.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/META-INF/jars/mixinsquared-fabric-0.3.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

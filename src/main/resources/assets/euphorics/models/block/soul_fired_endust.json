@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "euphorics:block/soul_fired_endust"
+  }
+}

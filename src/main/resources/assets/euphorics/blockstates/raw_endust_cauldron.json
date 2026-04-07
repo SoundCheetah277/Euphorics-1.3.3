@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "level=1": {
+      "model": "euphorics:block/raw_endust_cauldron_level1"
+    },
+    "level=2": {
+      "model": "euphorics:block/raw_endust_cauldron_level2"
+    },
+    "level=3": {
+      "model": "euphorics:block/raw_endust_cauldron_full"
+    }
+  }
+}

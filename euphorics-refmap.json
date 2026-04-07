@@ -1,0 +1,364 @@
+{
+  "mappings": {
+    "com/eightsidedsquare/euphorics/mixin/BowAttackGoalMixin": {
+      "canStart": "Lnet/minecraft/entity/ai/goal/BowAttackGoal;canStart()Z",
+      "shouldContinue": "Lnet/minecraft/entity/ai/goal/BowAttackGoal;shouldContinue()Z"
+    },
+    "com/eightsidedsquare/euphorics/mixin/BuddingAmethystBlockMixin": {
+      "randomTick": "Lnet/minecraft/block/BuddingAmethystBlock;randomTick(Lnet/minecraft/block/BlockState;Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/random/Random;)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/CrossbowAttackGoalMixin": {
+      "hasAliveTarget": "Lnet/minecraft/entity/ai/goal/CrossbowAttackGoal;hasAliveTarget()Z"
+    },
+    "com/eightsidedsquare/euphorics/mixin/EnderEyeItemMixin": {
+      "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z": "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z",
+      "use": "Lnet/minecraft/item/EnderEyeItem;use(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/TypedActionResult;",
+      "useOnBlock": "Lnet/minecraft/item/EnderEyeItem;useOnBlock(Lnet/minecraft/item/ItemUsageContext;)Lnet/minecraft/util/ActionResult;"
+    },
+    "com/eightsidedsquare/euphorics/mixin/EntityMixin": {
+      "Lnet/minecraft/block/Block;onLandedUpon(Lnet/minecraft/world/World;Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;F)V": "Lnet/minecraft/block/Block;onLandedUpon(Lnet/minecraft/world/World;Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;F)V",
+      "Lnet/minecraft/block/Block;onSteppedOn(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/entity/Entity;)V": "Lnet/minecraft/block/Block;onSteppedOn(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/entity/Entity;)V",
+      "Lnet/minecraft/block/BlockState;onEntityCollision(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;)V": "Lnet/minecraft/block/BlockState;onEntityCollision(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;)V",
+      "Lnet/minecraft/world/World;emitGameEvent(Lnet/minecraft/world/event/GameEvent;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/world/event/GameEvent$Emitter;)V": "Lnet/minecraft/world/World;emitGameEvent(Lnet/minecraft/world/event/GameEvent;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/world/event/GameEvent$Emitter;)V",
+      "checkBlockCollision": "Lnet/minecraft/entity/Entity;checkBlockCollision()V",
+      "fall": "Lnet/minecraft/entity/Entity;fall(DZLnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;)V",
+      "move": "Lnet/minecraft/entity/Entity;move(Lnet/minecraft/entity/MovementType;Lnet/minecraft/util/math/Vec3d;)V",
+      "occludeVibrationSignals": "Lnet/minecraft/entity/Entity;occludeVibrationSignals()Z",
+      "onSwimmingStart": "Lnet/minecraft/entity/Entity;onSwimmingStart()V",
+      "playStepSound": "Lnet/minecraft/entity/Entity;playStepSound(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V",
+      "playSwimSound": "Lnet/minecraft/entity/Entity;playSwimSound(F)V",
+      "shouldSpawnSprintingParticles": "Lnet/minecraft/entity/Entity;shouldSpawnSprintingParticles()Z"
+    },
+    "com/eightsidedsquare/euphorics/mixin/FallingBlockEntityMixin": {
+      "tick": "Lnet/minecraft/entity/FallingBlockEntity;tick()V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/HopperBlockEntityMixin": {
+      "extract(Lnet/minecraft/inventory/Inventory;Lnet/minecraft/entity/ItemEntity;)Z": "Lnet/minecraft/block/entity/HopperBlockEntity;extract(Lnet/minecraft/inventory/Inventory;Lnet/minecraft/entity/ItemEntity;)Z"
+    },
+    "com/eightsidedsquare/euphorics/mixin/ItemEntityMixin": {
+      "onPlayerCollision": "Lnet/minecraft/entity/ItemEntity;onPlayerCollision(Lnet/minecraft/entity/player/PlayerEntity;)V",
+      "tick": "Lnet/minecraft/entity/ItemEntity;tick()V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/ItemMixin": {
+      "useOnBlock": "Lnet/minecraft/item/Item;useOnBlock(Lnet/minecraft/item/ItemUsageContext;)Lnet/minecraft/util/ActionResult;"
+    },
+    "com/eightsidedsquare/euphorics/mixin/LivingEntityMixin": {
+      "Lnet/minecraft/entity/data/DataTracker;get(Lnet/minecraft/entity/data/TrackedData;)Ljava/lang/Object;": "Lnet/minecraft/entity/data/DataTracker;get(Lnet/minecraft/entity/data/TrackedData;)Ljava/lang/Object;",
+      "Lnet/minecraft/server/world/ServerWorld;spawnParticles(Lnet/minecraft/particle/ParticleEffect;DDDIDDDD)I": "Lnet/minecraft/server/world/ServerWorld;spawnParticles(Lnet/minecraft/particle/ParticleEffect;DDDIDDDD)I",
+      "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V": "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V",
+      "fall": "Lnet/minecraft/entity/LivingEntity;fall(DZLnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;)V",
+      "getHandSwingDuration": "Lnet/minecraft/entity/LivingEntity;getHandSwingDuration()I",
+      "isPushable": "Lnet/minecraft/entity/LivingEntity;isPushable()Z",
+      "pushAway": "Lnet/minecraft/entity/LivingEntity;pushAway(Lnet/minecraft/entity/Entity;)V",
+      "spawnConsumptionEffects": "Lnet/minecraft/entity/LivingEntity;spawnConsumptionEffects(Lnet/minecraft/item/ItemStack;I)V",
+      "spawnItemParticles": "Lnet/minecraft/entity/LivingEntity;spawnItemParticles(Lnet/minecraft/item/ItemStack;I)V",
+      "tickStatusEffects": "Lnet/minecraft/entity/LivingEntity;tickStatusEffects()V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/LockableContainerBlockEntityMixin": {
+      "checkUnlocked(Lnet/minecraft/entity/player/PlayerEntity;)Z": "Lnet/minecraft/block/entity/LockableContainerBlockEntity;checkUnlocked(Lnet/minecraft/entity/player/PlayerEntity;)Z"
+    },
+    "com/eightsidedsquare/euphorics/mixin/LookAtEntityGoalMixin": {
+      "canStart": "Lnet/minecraft/entity/ai/goal/LookAtEntityGoal;canStart()Z"
+    },
+    "com/eightsidedsquare/euphorics/mixin/MeleeAttackGoalMixin": {
+      "canStart": "Lnet/minecraft/entity/ai/goal/MeleeAttackGoal;canStart()Z",
+      "shouldContinue": "Lnet/minecraft/entity/ai/goal/MeleeAttackGoal;shouldContinue()Z"
+    },
+    "com/eightsidedsquare/euphorics/mixin/NearestLivingEntitiesSensorMixin": {
+      "Lnet/minecraft/entity/ai/brain/Brain;remember(Lnet/minecraft/entity/ai/brain/MemoryModuleType;Ljava/lang/Object;)V": "Lnet/minecraft/entity/ai/brain/Brain;remember(Lnet/minecraft/entity/ai/brain/MemoryModuleType;Ljava/lang/Object;)V",
+      "sense": "Lnet/minecraft/entity/ai/brain/sensor/NearestLivingEntitiesSensor;sense(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/LivingEntity;)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/NearestPlayersSensorMixin": {
+      "sense": "Lnet/minecraft/entity/ai/brain/sensor/NearestPlayersSensor;sense(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/LivingEntity;)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/PlayerEntityMixin": {
+      "addExhaustion": "Lnet/minecraft/entity/player/PlayerEntity;addExhaustion(F)V",
+      "isBlockBreakingRestricted": "Lnet/minecraft/entity/player/PlayerEntity;isBlockBreakingRestricted(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/GameMode;)Z",
+      "isInvulnerableTo": "Lnet/minecraft/entity/player/PlayerEntity;isInvulnerableTo(Lnet/minecraft/entity/damage/DamageSource;)Z",
+      "tick": "Lnet/minecraft/entity/player/PlayerEntity;tick()V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/ProjectileAttackGoalMixin": {
+      "canStart": "Lnet/minecraft/entity/ai/goal/ProjectileAttackGoal;canStart()Z",
+      "shouldContinue": "Lnet/minecraft/entity/ai/goal/ProjectileAttackGoal;shouldContinue()Z"
+    },
+    "com/eightsidedsquare/euphorics/mixin/RamImpactTaskMixin": {
+      "shouldSnapHorn": "Lnet/minecraft/entity/ai/brain/task/RamImpactTask;shouldSnapHorn(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/passive/GoatEntity;)Z"
+    },
+    "com/eightsidedsquare/euphorics/mixin/SculkVeinBlockMixin": {
+      "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z": "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z",
+      "Lnet/minecraft/world/WorldAccess;setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;I)Z": "Lnet/minecraft/world/WorldAccess;setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;I)Z",
+      "convertToBlock": "Lnet/minecraft/block/SculkVeinBlock;convertToBlock(Lnet/minecraft/block/entity/SculkSpreadManager;Lnet/minecraft/world/WorldAccess;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/random/Random;)Z",
+      "spreadAtSamePosition": "Lnet/minecraft/block/SculkVeinBlock;spreadAtSamePosition(Lnet/minecraft/world/WorldAccess;Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/random/Random;)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/SculkVeinBlockMixin$SculkVeinGrowCheckerMixin": {
+      "canGrow(Lnet/minecraft/world/BlockView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;Lnet/minecraft/block/BlockState;)Z": "Lnet/minecraft/block/SculkVeinBlock$SculkVeinGrowChecker;canGrow(Lnet/minecraft/world/BlockView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;Lnet/minecraft/block/BlockState;)Z"
+    },
+    "com/eightsidedsquare/euphorics/mixin/ServerPlayerEntityMixin": {
+      "attack": "Lnet/minecraft/server/network/ServerPlayerEntity;attack(Lnet/minecraft/entity/Entity;)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/ServerPlayerInteractionManagerMixin": {
+      "Lnet/minecraft/block/BlockState;onUse(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;": "Lnet/minecraft/block/BlockState;onUse(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;",
+      "Lnet/minecraft/entity/player/ItemCooldownManager;isCoolingDown(Lnet/minecraft/item/Item;)Z": "Lnet/minecraft/entity/player/ItemCooldownManager;isCoolingDown(Lnet/minecraft/item/Item;)Z",
+      "interactBlock": "Lnet/minecraft/server/network/ServerPlayerInteractionManager;interactBlock(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;",
+      "interactItem": "Lnet/minecraft/server/network/ServerPlayerInteractionManager;interactItem(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult;"
+    },
+    "com/eightsidedsquare/euphorics/mixin/SpellcastingIllagerEntityMixin$CastSpellGoalMixin": {
+      "Lnet/minecraft/entity/LivingEntity;isAlive()Z": "Lnet/minecraft/entity/LivingEntity;isAlive()Z",
+      "canStart": "Lnet/minecraft/entity/mob/SpellcastingIllagerEntity$CastSpellGoal;canStart()Z",
+      "shouldContinue": "Lnet/minecraft/entity/mob/SpellcastingIllagerEntity$CastSpellGoal;shouldContinue()Z"
+    },
+    "com/eightsidedsquare/euphorics/mixin/SpellcastingIllagerEntityMixin$LookAtTargetGoalMixin": {
+      "Lnet/minecraft/entity/mob/SpellcastingIllagerEntity;getTarget()Lnet/minecraft/entity/LivingEntity;": "Lnet/minecraft/entity/mob/SpellcastingIllagerEntity;getTarget()Lnet/minecraft/entity/LivingEntity;",
+      "tick": "Lnet/minecraft/entity/mob/SpellcastingIllagerEntity$LookAtTargetGoal;tick()V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/TargetPredicateMixin": {
+      "test": "Lnet/minecraft/entity/ai/TargetPredicate;test(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/entity/LivingEntity;)Z"
+    },
+    "com/eightsidedsquare/euphorics/mixin/client/AbstractInventoryScreenMixin": {
+      "render": "Lnet/minecraft/client/gui/screen/ingame/AbstractInventoryScreen;render(Lnet/minecraft/client/util/math/MatrixStack;IIF)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/client/ClientPlayerInteractionManagerMixin": {
+      "Lnet/minecraft/block/BlockState;onUse(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;": "Lnet/minecraft/block/BlockState;onUse(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;",
+      "Lnet/minecraft/entity/player/ItemCooldownManager;isCoolingDown(Lnet/minecraft/item/Item;)Z": "Lnet/minecraft/entity/player/ItemCooldownManager;isCoolingDown(Lnet/minecraft/item/Item;)Z",
+      "attackEntity": "Lnet/minecraft/client/network/ClientPlayerInteractionManager;attackEntity(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;)V",
+      "interactBlockInternal": "Lnet/minecraft/client/network/ClientPlayerInteractionManager;interactBlockInternal(Lnet/minecraft/client/network/ClientPlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;",
+      "interactEntity": "Lnet/minecraft/client/network/ClientPlayerInteractionManager;interactEntity(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult;",
+      "interactEntityAtLocation": "Lnet/minecraft/client/network/ClientPlayerInteractionManager;interactEntityAtLocation(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/util/hit/EntityHitResult;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult;",
+      "interactItem": "Lnet/minecraft/client/network/ClientPlayerInteractionManager;interactItem(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult;"
+    },
+    "com/eightsidedsquare/euphorics/mixin/client/EntityRenderDispatcherMixin": {
+      "renderHitbox": "Lnet/minecraft/client/render/entity/EntityRenderDispatcher;renderHitbox(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumer;Lnet/minecraft/entity/Entity;F)V",
+      "renderShadow": "Lnet/minecraft/client/render/entity/EntityRenderDispatcher;renderShadow(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;Lnet/minecraft/entity/Entity;FFLnet/minecraft/world/WorldView;F)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/client/GameRendererMixin": {
+      "Lnet/minecraft/entity/projectile/ProjectileUtil;raycast(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Box;Ljava/util/function/Predicate;D)Lnet/minecraft/util/hit/EntityHitResult;": "Lnet/minecraft/entity/projectile/ProjectileUtil;raycast(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Box;Ljava/util/function/Predicate;D)Lnet/minecraft/util/hit/EntityHitResult;",
+      "updateTargetedEntity": "Lnet/minecraft/client/render/GameRenderer;updateTargetedEntity(F)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/client/InGameHudMixin": {
+      "Lnet/minecraft/client/gui/hud/InGameHud;drawTexture(Lnet/minecraft/client/util/math/MatrixStack;IIIIII)V": "Lnet/minecraft/client/gui/hud/InGameHud;drawTexture(Lnet/minecraft/client/util/math/MatrixStack;IIIIII)V",
+      "drawHeart": "Lnet/minecraft/client/gui/hud/InGameHud;drawHeart(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/gui/hud/InGameHud$HeartType;IIIZZ)V",
+      "renderCrosshair": "Lnet/minecraft/client/gui/hud/InGameHud;renderCrosshair(Lnet/minecraft/client/util/math/MatrixStack;)V",
+      "renderStatusBars": "Lnet/minecraft/client/gui/hud/InGameHud;renderStatusBars(Lnet/minecraft/client/util/math/MatrixStack;)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/client/MinecraftClientMixin": {
+      "Lnet/minecraft/client/network/ClientPlayNetworkHandler;sendPacket(Lnet/minecraft/network/Packet;)V": "Lnet/minecraft/client/network/ClientPlayNetworkHandler;sendPacket(Lnet/minecraft/network/packet/Packet;)V",
+      "handleInputEvents": "Lnet/minecraft/client/MinecraftClient;handleInputEvents()V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/client/PlayerEntityRendererMixin": {
+      "render(Lnet/minecraft/client/network/AbstractClientPlayerEntity;FFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V": "Lnet/minecraft/client/render/entity/PlayerEntityRenderer;render(Lnet/minecraft/client/network/AbstractClientPlayerEntity;FFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$BouncySquaredMixin": {
+      "Lmoriyashiine/enchancement/mixin/bouncy/LivingEntityMixin;enchancement$bouncy(FFLnet/minecraft/entity/damage/DamageSource;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V": "Lmoriyashiine/enchancement/mixin/bouncy/LivingEntityMixin;enchancement$bouncy(FFLnet/minecraft/entity/damage/DamageSource;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+      "Lnet/minecraft/server/world/ServerWorld;spawnParticles(Lnet/minecraft/particle/ParticleEffect;DDDIDDDD)I": "Lnet/minecraft/server/world/ServerWorld;spawnParticles(Lnet/minecraft/particle/ParticleEffect;DDDIDDDD)I",
+      "Lnet/minecraft/world/World;playSoundFromEntity(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V": "Lnet/minecraft/world/World;playSoundFromEntity(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$BuoyComponentMixin": {
+      "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V": "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$DashComponentMixin": {
+      "Lnet/minecraft/entity/player/PlayerEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V": "Lnet/minecraft/entity/player/PlayerEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V",
+      "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V": "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V",
+      "handle": "Lmoriyashiine/enchancement/common/component/entity/DashComponent;handle(Lnet/minecraft/entity/player/PlayerEntity;Lmoriyashiine/enchancement/common/component/entity/DashComponent;)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$ExtendedWaterComponentMixin": {
+      "Lnet/minecraft/entity/LivingEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V": "Lnet/minecraft/entity/LivingEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V",
+      "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V": "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V",
+      "Lnet/minecraft/world/World;playSound(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V": "Lnet/minecraft/world/World;playSound(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$GaleComponentMixin": {
+      "Lnet/minecraft/entity/player/PlayerEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V": "Lnet/minecraft/entity/player/PlayerEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V",
+      "addGaleParticles": "Lmoriyashiine/enchancement/common/component/entity/GaleComponent;addGaleParticles(Lnet/minecraft/entity/Entity;)V",
+      "handle": "Lmoriyashiine/enchancement/common/component/entity/GaleComponent;handle(Lnet/minecraft/entity/player/PlayerEntity;Lmoriyashiine/enchancement/common/component/entity/GaleComponent;)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$SlideComponentMixin": {
+      "Lnet/minecraft/world/World;emitGameEvent(Lnet/minecraft/world/event/GameEvent;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/world/event/GameEvent$Emitter;)V": "Lnet/minecraft/world/World;emitGameEvent(Lnet/minecraft/world/event/GameEvent;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/world/event/GameEvent$Emitter;)V"
+    },
+    "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$StrafeComponentMixin": {
+      "Lnet/minecraft/entity/player/PlayerEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V": "Lnet/minecraft/entity/player/PlayerEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V",
+      "addStrafeParticles": "Lmoriyashiine/enchancement/common/component/entity/StrafeComponent;addStrafeParticles(Lnet/minecraft/entity/Entity;)V",
+      "handle": "Lmoriyashiine/enchancement/common/component/entity/StrafeComponent;handle(Lnet/minecraft/entity/player/PlayerEntity;Lmoriyashiine/enchancement/common/component/entity/StrafeComponent;DD)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "com/eightsidedsquare/euphorics/mixin/BowAttackGoalMixin": {
+        "canStart": "Lnet/minecraft/entity/ai/goal/BowAttackGoal;canStart()Z",
+        "shouldContinue": "Lnet/minecraft/entity/ai/goal/BowAttackGoal;shouldContinue()Z"
+      },
+      "com/eightsidedsquare/euphorics/mixin/BuddingAmethystBlockMixin": {
+        "randomTick": "Lnet/minecraft/block/BuddingAmethystBlock;randomTick(Lnet/minecraft/block/BlockState;Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/random/Random;)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/CrossbowAttackGoalMixin": {
+        "hasAliveTarget": "Lnet/minecraft/entity/ai/goal/CrossbowAttackGoal;hasAliveTarget()Z"
+      },
+      "com/eightsidedsquare/euphorics/mixin/EnderEyeItemMixin": {
+        "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z": "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z",
+        "use": "Lnet/minecraft/item/EnderEyeItem;use(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/TypedActionResult;",
+        "useOnBlock": "Lnet/minecraft/item/EnderEyeItem;useOnBlock(Lnet/minecraft/item/ItemUsageContext;)Lnet/minecraft/util/ActionResult;"
+      },
+      "com/eightsidedsquare/euphorics/mixin/EntityMixin": {
+        "Lnet/minecraft/block/Block;onLandedUpon(Lnet/minecraft/world/World;Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;F)V": "Lnet/minecraft/block/Block;onLandedUpon(Lnet/minecraft/world/World;Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;F)V",
+        "Lnet/minecraft/block/Block;onSteppedOn(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/entity/Entity;)V": "Lnet/minecraft/block/Block;onSteppedOn(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/entity/Entity;)V",
+        "Lnet/minecraft/block/BlockState;onEntityCollision(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;)V": "Lnet/minecraft/block/BlockState;onEntityCollision(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;)V",
+        "Lnet/minecraft/world/World;emitGameEvent(Lnet/minecraft/world/event/GameEvent;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/world/event/GameEvent$Emitter;)V": "Lnet/minecraft/world/World;emitGameEvent(Lnet/minecraft/world/event/GameEvent;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/world/event/GameEvent$Emitter;)V",
+        "checkBlockCollision": "Lnet/minecraft/entity/Entity;checkBlockCollision()V",
+        "fall": "Lnet/minecraft/entity/Entity;fall(DZLnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;)V",
+        "move": "Lnet/minecraft/entity/Entity;move(Lnet/minecraft/entity/MovementType;Lnet/minecraft/util/math/Vec3d;)V",
+        "occludeVibrationSignals": "Lnet/minecraft/entity/Entity;occludeVibrationSignals()Z",
+        "onSwimmingStart": "Lnet/minecraft/entity/Entity;onSwimmingStart()V",
+        "playStepSound": "Lnet/minecraft/entity/Entity;playStepSound(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V",
+        "playSwimSound": "Lnet/minecraft/entity/Entity;playSwimSound(F)V",
+        "shouldSpawnSprintingParticles": "Lnet/minecraft/entity/Entity;shouldSpawnSprintingParticles()Z"
+      },
+      "com/eightsidedsquare/euphorics/mixin/FallingBlockEntityMixin": {
+        "tick": "Lnet/minecraft/entity/FallingBlockEntity;tick()V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/HopperBlockEntityMixin": {
+        "extract(Lnet/minecraft/inventory/Inventory;Lnet/minecraft/entity/ItemEntity;)Z": "Lnet/minecraft/block/entity/HopperBlockEntity;extract(Lnet/minecraft/inventory/Inventory;Lnet/minecraft/entity/ItemEntity;)Z"
+      },
+      "com/eightsidedsquare/euphorics/mixin/ItemEntityMixin": {
+        "onPlayerCollision": "Lnet/minecraft/entity/ItemEntity;onPlayerCollision(Lnet/minecraft/entity/player/PlayerEntity;)V",
+        "tick": "Lnet/minecraft/entity/ItemEntity;tick()V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/ItemMixin": {
+        "useOnBlock": "Lnet/minecraft/item/Item;useOnBlock(Lnet/minecraft/item/ItemUsageContext;)Lnet/minecraft/util/ActionResult;"
+      },
+      "com/eightsidedsquare/euphorics/mixin/LivingEntityMixin": {
+        "Lnet/minecraft/entity/data/DataTracker;get(Lnet/minecraft/entity/data/TrackedData;)Ljava/lang/Object;": "Lnet/minecraft/entity/data/DataTracker;get(Lnet/minecraft/entity/data/TrackedData;)Ljava/lang/Object;",
+        "Lnet/minecraft/server/world/ServerWorld;spawnParticles(Lnet/minecraft/particle/ParticleEffect;DDDIDDDD)I": "Lnet/minecraft/server/world/ServerWorld;spawnParticles(Lnet/minecraft/particle/ParticleEffect;DDDIDDDD)I",
+        "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V": "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V",
+        "fall": "Lnet/minecraft/entity/LivingEntity;fall(DZLnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;)V",
+        "getHandSwingDuration": "Lnet/minecraft/entity/LivingEntity;getHandSwingDuration()I",
+        "isPushable": "Lnet/minecraft/entity/LivingEntity;isPushable()Z",
+        "pushAway": "Lnet/minecraft/entity/LivingEntity;pushAway(Lnet/minecraft/entity/Entity;)V",
+        "spawnConsumptionEffects": "Lnet/minecraft/entity/LivingEntity;spawnConsumptionEffects(Lnet/minecraft/item/ItemStack;I)V",
+        "spawnItemParticles": "Lnet/minecraft/entity/LivingEntity;spawnItemParticles(Lnet/minecraft/item/ItemStack;I)V",
+        "tickStatusEffects": "Lnet/minecraft/entity/LivingEntity;tickStatusEffects()V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/LockableContainerBlockEntityMixin": {
+        "checkUnlocked(Lnet/minecraft/entity/player/PlayerEntity;)Z": "Lnet/minecraft/block/entity/LockableContainerBlockEntity;checkUnlocked(Lnet/minecraft/entity/player/PlayerEntity;)Z"
+      },
+      "com/eightsidedsquare/euphorics/mixin/LookAtEntityGoalMixin": {
+        "canStart": "Lnet/minecraft/entity/ai/goal/LookAtEntityGoal;canStart()Z"
+      },
+      "com/eightsidedsquare/euphorics/mixin/MeleeAttackGoalMixin": {
+        "canStart": "Lnet/minecraft/entity/ai/goal/MeleeAttackGoal;canStart()Z",
+        "shouldContinue": "Lnet/minecraft/entity/ai/goal/MeleeAttackGoal;shouldContinue()Z"
+      },
+      "com/eightsidedsquare/euphorics/mixin/NearestLivingEntitiesSensorMixin": {
+        "Lnet/minecraft/entity/ai/brain/Brain;remember(Lnet/minecraft/entity/ai/brain/MemoryModuleType;Ljava/lang/Object;)V": "Lnet/minecraft/entity/ai/brain/Brain;remember(Lnet/minecraft/entity/ai/brain/MemoryModuleType;Ljava/lang/Object;)V",
+        "sense": "Lnet/minecraft/entity/ai/brain/sensor/NearestLivingEntitiesSensor;sense(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/LivingEntity;)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/NearestPlayersSensorMixin": {
+        "sense": "Lnet/minecraft/entity/ai/brain/sensor/NearestPlayersSensor;sense(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/LivingEntity;)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/PlayerEntityMixin": {
+        "addExhaustion": "Lnet/minecraft/entity/player/PlayerEntity;addExhaustion(F)V",
+        "isBlockBreakingRestricted": "Lnet/minecraft/entity/player/PlayerEntity;isBlockBreakingRestricted(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/GameMode;)Z",
+        "isInvulnerableTo": "Lnet/minecraft/entity/player/PlayerEntity;isInvulnerableTo(Lnet/minecraft/entity/damage/DamageSource;)Z",
+        "tick": "Lnet/minecraft/entity/player/PlayerEntity;tick()V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/ProjectileAttackGoalMixin": {
+        "canStart": "Lnet/minecraft/entity/ai/goal/ProjectileAttackGoal;canStart()Z",
+        "shouldContinue": "Lnet/minecraft/entity/ai/goal/ProjectileAttackGoal;shouldContinue()Z"
+      },
+      "com/eightsidedsquare/euphorics/mixin/RamImpactTaskMixin": {
+        "shouldSnapHorn": "Lnet/minecraft/entity/ai/brain/task/RamImpactTask;shouldSnapHorn(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/passive/GoatEntity;)Z"
+      },
+      "com/eightsidedsquare/euphorics/mixin/SculkVeinBlockMixin": {
+        "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z": "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z",
+        "Lnet/minecraft/world/WorldAccess;setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;I)Z": "Lnet/minecraft/world/WorldAccess;setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;I)Z",
+        "convertToBlock": "Lnet/minecraft/block/SculkVeinBlock;convertToBlock(Lnet/minecraft/block/entity/SculkSpreadManager;Lnet/minecraft/world/WorldAccess;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/random/Random;)Z",
+        "spreadAtSamePosition": "Lnet/minecraft/block/SculkVeinBlock;spreadAtSamePosition(Lnet/minecraft/world/WorldAccess;Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/random/Random;)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/SculkVeinBlockMixin$SculkVeinGrowCheckerMixin": {
+        "canGrow(Lnet/minecraft/world/BlockView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;Lnet/minecraft/block/BlockState;)Z": "Lnet/minecraft/block/SculkVeinBlock$SculkVeinGrowChecker;canGrow(Lnet/minecraft/world/BlockView;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/Direction;Lnet/minecraft/block/BlockState;)Z"
+      },
+      "com/eightsidedsquare/euphorics/mixin/ServerPlayerEntityMixin": {
+        "attack": "Lnet/minecraft/server/network/ServerPlayerEntity;attack(Lnet/minecraft/entity/Entity;)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/ServerPlayerInteractionManagerMixin": {
+        "Lnet/minecraft/block/BlockState;onUse(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;": "Lnet/minecraft/block/BlockState;onUse(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;",
+        "Lnet/minecraft/entity/player/ItemCooldownManager;isCoolingDown(Lnet/minecraft/item/Item;)Z": "Lnet/minecraft/entity/player/ItemCooldownManager;isCoolingDown(Lnet/minecraft/item/Item;)Z",
+        "interactBlock": "Lnet/minecraft/server/network/ServerPlayerInteractionManager;interactBlock(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;",
+        "interactItem": "Lnet/minecraft/server/network/ServerPlayerInteractionManager;interactItem(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult;"
+      },
+      "com/eightsidedsquare/euphorics/mixin/SpellcastingIllagerEntityMixin$CastSpellGoalMixin": {
+        "Lnet/minecraft/entity/LivingEntity;isAlive()Z": "Lnet/minecraft/entity/LivingEntity;isAlive()Z",
+        "canStart": "Lnet/minecraft/entity/mob/SpellcastingIllagerEntity$CastSpellGoal;canStart()Z",
+        "shouldContinue": "Lnet/minecraft/entity/mob/SpellcastingIllagerEntity$CastSpellGoal;shouldContinue()Z"
+      },
+      "com/eightsidedsquare/euphorics/mixin/SpellcastingIllagerEntityMixin$LookAtTargetGoalMixin": {
+        "Lnet/minecraft/entity/mob/SpellcastingIllagerEntity;getTarget()Lnet/minecraft/entity/LivingEntity;": "Lnet/minecraft/entity/mob/SpellcastingIllagerEntity;getTarget()Lnet/minecraft/entity/LivingEntity;",
+        "tick": "Lnet/minecraft/entity/mob/SpellcastingIllagerEntity$LookAtTargetGoal;tick()V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/TargetPredicateMixin": {
+        "test": "Lnet/minecraft/entity/ai/TargetPredicate;test(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/entity/LivingEntity;)Z"
+      },
+      "com/eightsidedsquare/euphorics/mixin/client/AbstractInventoryScreenMixin": {
+        "render": "Lnet/minecraft/client/gui/screen/ingame/AbstractInventoryScreen;render(Lnet/minecraft/client/util/math/MatrixStack;IIF)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/client/ClientPlayerInteractionManagerMixin": {
+        "Lnet/minecraft/block/BlockState;onUse(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;": "Lnet/minecraft/block/BlockState;onUse(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;",
+        "Lnet/minecraft/entity/player/ItemCooldownManager;isCoolingDown(Lnet/minecraft/item/Item;)Z": "Lnet/minecraft/entity/player/ItemCooldownManager;isCoolingDown(Lnet/minecraft/item/Item;)Z",
+        "attackEntity": "Lnet/minecraft/client/network/ClientPlayerInteractionManager;attackEntity(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;)V",
+        "interactBlockInternal": "Lnet/minecraft/client/network/ClientPlayerInteractionManager;interactBlockInternal(Lnet/minecraft/client/network/ClientPlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;",
+        "interactEntity": "Lnet/minecraft/client/network/ClientPlayerInteractionManager;interactEntity(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult;",
+        "interactEntityAtLocation": "Lnet/minecraft/client/network/ClientPlayerInteractionManager;interactEntityAtLocation(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/util/hit/EntityHitResult;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult;",
+        "interactItem": "Lnet/minecraft/client/network/ClientPlayerInteractionManager;interactItem(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult;"
+      },
+      "com/eightsidedsquare/euphorics/mixin/client/EntityRenderDispatcherMixin": {
+        "renderHitbox": "Lnet/minecraft/client/render/entity/EntityRenderDispatcher;renderHitbox(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumer;Lnet/minecraft/entity/Entity;F)V",
+        "renderShadow": "Lnet/minecraft/client/render/entity/EntityRenderDispatcher;renderShadow(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;Lnet/minecraft/entity/Entity;FFLnet/minecraft/world/WorldView;F)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/client/GameRendererMixin": {
+        "Lnet/minecraft/entity/projectile/ProjectileUtil;raycast(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Box;Ljava/util/function/Predicate;D)Lnet/minecraft/util/hit/EntityHitResult;": "Lnet/minecraft/entity/projectile/ProjectileUtil;raycast(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Box;Ljava/util/function/Predicate;D)Lnet/minecraft/util/hit/EntityHitResult;",
+        "updateTargetedEntity": "Lnet/minecraft/client/render/GameRenderer;updateTargetedEntity(F)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/client/InGameHudMixin": {
+        "Lnet/minecraft/client/gui/hud/InGameHud;drawTexture(Lnet/minecraft/client/util/math/MatrixStack;IIIIII)V": "Lnet/minecraft/client/gui/hud/InGameHud;drawTexture(Lnet/minecraft/client/util/math/MatrixStack;IIIIII)V",
+        "drawHeart": "Lnet/minecraft/client/gui/hud/InGameHud;drawHeart(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/gui/hud/InGameHud$HeartType;IIIZZ)V",
+        "renderCrosshair": "Lnet/minecraft/client/gui/hud/InGameHud;renderCrosshair(Lnet/minecraft/client/util/math/MatrixStack;)V",
+        "renderStatusBars": "Lnet/minecraft/client/gui/hud/InGameHud;renderStatusBars(Lnet/minecraft/client/util/math/MatrixStack;)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/client/MinecraftClientMixin": {
+        "Lnet/minecraft/client/network/ClientPlayNetworkHandler;sendPacket(Lnet/minecraft/network/Packet;)V": "Lnet/minecraft/client/network/ClientPlayNetworkHandler;sendPacket(Lnet/minecraft/network/packet/Packet;)V",
+        "handleInputEvents": "Lnet/minecraft/client/MinecraftClient;handleInputEvents()V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/client/PlayerEntityRendererMixin": {
+        "render(Lnet/minecraft/client/network/AbstractClientPlayerEntity;FFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V": "Lnet/minecraft/client/render/entity/PlayerEntityRenderer;render(Lnet/minecraft/client/network/AbstractClientPlayerEntity;FFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$BouncySquaredMixin": {
+        "Lmoriyashiine/enchancement/mixin/bouncy/LivingEntityMixin;enchancement$bouncy(FFLnet/minecraft/entity/damage/DamageSource;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V": "Lmoriyashiine/enchancement/mixin/bouncy/LivingEntityMixin;enchancement$bouncy(FFLnet/minecraft/entity/damage/DamageSource;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V",
+        "Lnet/minecraft/server/world/ServerWorld;spawnParticles(Lnet/minecraft/particle/ParticleEffect;DDDIDDDD)I": "Lnet/minecraft/server/world/ServerWorld;spawnParticles(Lnet/minecraft/particle/ParticleEffect;DDDIDDDD)I",
+        "Lnet/minecraft/world/World;playSoundFromEntity(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V": "Lnet/minecraft/world/World;playSoundFromEntity(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$BuoyComponentMixin": {
+        "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V": "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$DashComponentMixin": {
+        "Lnet/minecraft/entity/player/PlayerEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V": "Lnet/minecraft/entity/player/PlayerEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V",
+        "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V": "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V",
+        "handle": "Lmoriyashiine/enchancement/common/component/entity/DashComponent;handle(Lnet/minecraft/entity/player/PlayerEntity;Lmoriyashiine/enchancement/common/component/entity/DashComponent;)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$ExtendedWaterComponentMixin": {
+        "Lnet/minecraft/entity/LivingEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V": "Lnet/minecraft/entity/LivingEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V",
+        "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V": "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V",
+        "Lnet/minecraft/world/World;playSound(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V": "Lnet/minecraft/world/World;playSound(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$GaleComponentMixin": {
+        "Lnet/minecraft/entity/player/PlayerEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V": "Lnet/minecraft/entity/player/PlayerEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V",
+        "addGaleParticles": "Lmoriyashiine/enchancement/common/component/entity/GaleComponent;addGaleParticles(Lnet/minecraft/entity/Entity;)V",
+        "handle": "Lmoriyashiine/enchancement/common/component/entity/GaleComponent;handle(Lnet/minecraft/entity/player/PlayerEntity;Lmoriyashiine/enchancement/common/component/entity/GaleComponent;)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$SlideComponentMixin": {
+        "Lnet/minecraft/world/World;emitGameEvent(Lnet/minecraft/world/event/GameEvent;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/world/event/GameEvent$Emitter;)V": "Lnet/minecraft/world/World;emitGameEvent(Lnet/minecraft/world/event/GameEvent;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/world/event/GameEvent$Emitter;)V"
+      },
+      "com/eightsidedsquare/euphorics/mixin/compat/Enchancement$StrafeComponentMixin": {
+        "Lnet/minecraft/entity/player/PlayerEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V": "Lnet/minecraft/entity/player/PlayerEntity;playSound(Lnet/minecraft/sound/SoundEvent;FF)V",
+        "addStrafeParticles": "Lmoriyashiine/enchancement/common/component/entity/StrafeComponent;addStrafeParticles(Lnet/minecraft/entity/Entity;)V",
+        "handle": "Lmoriyashiine/enchancement/common/component/entity/StrafeComponent;handle(Lnet/minecraft/entity/player/PlayerEntity;Lmoriyashiine/enchancement/common/component/entity/StrafeComponent;DD)V"
+      }
+    }
+  }
+}

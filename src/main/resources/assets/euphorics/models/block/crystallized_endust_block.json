@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "euphorics:block/crystallized_endust_block"
+  }
+}

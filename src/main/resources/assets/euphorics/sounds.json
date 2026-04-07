@@ -1,0 +1,127 @@
+{
+  "item.crystallized_endust.snort": {
+    "sounds": [
+      {
+        "name": "euphorics:item/crystallized_endust/snort1"
+      },
+      {
+        "name": "euphorics:item/crystallized_endust/snort2"
+      },
+      {
+        "name": "euphorics:item/crystallized_endust/snort3"
+      },
+      {
+        "name": "euphorics:item/crystallized_endust/snort4"
+      }
+    ],
+    "subtitle": "euphorics.subtitles.item.crystallized_endust.snort"
+  },
+  "entity.shade.glitch" : {
+    "sounds": [
+      {
+        "name": "euphorics:entity/shade/glitch"
+      }
+    ]
+  },
+  "entity.shade.death": {
+    "sounds": [
+      {
+        "name": "euphorics:entity/shade/death1"
+      },
+      {
+        "name": "euphorics:entity/shade/death2"
+      },
+      {
+        "name": "euphorics:entity/shade/death3"
+      }
+    ],
+    "subtitle": "euphorics.subtitles.entity.shade.death"
+  },
+  "entity.shade.hurt": {
+    "sounds": [
+      {
+        "name": "euphorics:entity/shade/hurt1"
+      },
+      {
+        "name": "euphorics:entity/shade/hurt2"
+      },
+      {
+        "name": "euphorics:entity/shade/hurt3"
+      }
+    ],
+    "subtitle": "euphorics.subtitles.entity.shade.hurt"
+  },
+  "entity.shade.attack": {
+    "sounds": [
+      {
+        "name": "euphorics:entity/shade/attack1"
+      },
+      {
+        "name": "euphorics:entity/shade/attack2"
+      },
+      {
+        "name": "euphorics:entity/shade/attack3"
+      }
+    ],
+    "subtitle": "euphorics.subtitles.entity.shade.attack"
+  },
+  "entity.shade.teleport": {
+    "sounds": [
+      {
+        "name": "minecraft:mob/illusion_illager/mirror_move1"
+      },
+      {
+        "name": "minecraft:mob/illusion_illager/mirror_move2"
+      }
+    ],
+    "subtitle": "euphorics.subtitles.entity.shade.teleport"
+  },
+  "item.pickaxe.scrape": {
+    "sounds": [
+      "item/axe/scrape1",
+      {
+        "name": "item/axe/scrape1",
+        "pitch": 0.9
+      },
+      {
+        "name": "item/axe/scrape1",
+        "pitch": 1.1
+      },
+      "item/axe/scrape2",
+      {
+        "name": "item/axe/scrape2",
+        "pitch": 0.9
+      },
+      {
+        "name": "item/axe/scrape2",
+        "pitch": 1.1
+      },
+      "item/axe/scrape3",
+      {
+        "name": "item/axe/scrape3",
+        "pitch": 0.9
+      },
+      {
+        "name": "item/axe/scrape3",
+        "pitch": 1.1
+      }
+    ],
+    "subtitle": "euphorics.subtitles.item.pickaxe.scrape"
+  },
+  "block.scraped_end_portal_frame.regenerate": {
+    "sounds": [
+      "block/chorus_flower/grow1",
+      "block/chorus_flower/grow2",
+      "block/chorus_flower/grow3",
+      "block/chorus_flower/grow4"
+    ],
+    "subtitle": "euphorics.subtitles.block.scraped_end_portal_frame.regenerate"
+  },
+  "event.blink" : {
+    "sounds": [
+      {
+        "name": "euphorics:event/blink"
+      }
+    ]
+  }
+}

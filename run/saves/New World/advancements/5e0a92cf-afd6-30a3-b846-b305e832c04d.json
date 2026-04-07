@@ -1,0 +1,9 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:taiga": "2026-04-07 10:03:21 -0600"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/spore_blossom",
+    "textures": {
+        "particle": "euphorics:block/spore_blossom_wither1",
+        "flower": "euphorics:block/spore_blossom_wither1",
+        "base": "euphorics:block/spore_blossom_base_wither1"
+    }
+}
