@@ -1,6 +1,6 @@
 package com.eightsidedsquare.euphorics.mixin.compat;
 
-import moriyashiine.enchancement.common.component.entity.*;
+//import moriyashiine.enchancement.common.component.entity.*;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleEffect;
@@ -14,7 +14,7 @@ import com.llamalad7.mixinextras.injector.v2.*;
 import org.spongepowered.asm.mixin.injection.*;
 import net.minecraft.*;
 
-@Mixin({ ExtendedWaterComponent.class })
+//@Mixin({ ExtendedWaterComponent.class })
 public class Enchancement$ExtendedWaterComponentMixin
 {
     @Shadow

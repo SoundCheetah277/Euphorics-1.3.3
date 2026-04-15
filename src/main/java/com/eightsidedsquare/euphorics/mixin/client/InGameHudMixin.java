@@ -16,10 +16,8 @@ import com.llamalad7.mixinextras.injector.wrapoperation.*;
 import com.eightsidedsquare.euphorics.client.*;
 import java.util.*;
 import com.mojang.blaze3d.systems.*;
-import java.util.function.*;
 import ladysnake.satin.api.managed.*;
 import com.eightsidedsquare.euphorics.cca.*;
-import net.minecraft.*;
 import com.eightsidedsquare.euphorics.core.*;
 
 @Mixin({ InGameHud.class })
@@ -31,11 +29,11 @@ public abstract class InGameHudMixin extends DrawableHelper
     @Inject(method = { "drawHeart" }, at = { @At("HEAD") }, cancellable = true)
     private void drawAstralPlaneHeart(final MatrixStack matrices, final InGameHud.HeartType type, final int x, final int y, final int v, final boolean blinking, final boolean halfHeart, final CallbackInfo ci) {
         if (!EuphoriaComponent.isOutOfAstralPlane(MinecraftClient.getInstance().cameraEntity)) {
-            if (type.equals((Object)InGameHud.HeartType.CONTAINER)) {
+            if (type.equals(InGameHud.HeartType.CONTAINER)) {
                 this.drawTexture(matrices, x, y, 25, 0, 9, 9);
             }
             else {
-                this.drawAstralIcon(matrices, x, y, halfHeart ? 9 : 0, 0, 9, 9);
+                this.drawAstralIcon(matrices, x, y, halfHeart ? 9 : 0, 0);
             }
             ci.cancel();
         }
@@ -44,7 +42,7 @@ public abstract class InGameHudMixin extends DrawableHelper
     @WrapOperation(method = { "renderStatusBars" }, at = { @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/hud/InGameHud;drawTexture(Lnet/minecraft/client/util/math/MatrixStack;IIIIII)V", ordinal = 4) })
     private void drawAstralPlaneShank(final InGameHud hud, final MatrixStack matrices, final int x, final int y, final int u, final int v, final int width, final int height, final Operation<Void> original) {
         if (!EuphoriaComponent.isOutOfAstralPlane(MinecraftClient.getInstance().cameraEntity)) {
-            this.drawAstralIcon(matrices, x, y, 0, 9, 9, 9);
+            this.drawAstralIcon(matrices, x, y, 0, 9);
         }
         else {
             original.call(hud, matrices, x, y, u, v, width, height);
@@ -54,7 +52,7 @@ public abstract class InGameHudMixin extends DrawableHelper
     @WrapOperation(method = { "renderStatusBars" }, at = { @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/hud/InGameHud;drawTexture(Lnet/minecraft/client/util/math/MatrixStack;IIIIII)V", ordinal = 5) })
     private void drawAstralPlaneHalfShank(final InGameHud hud, final MatrixStack matrices, final int x, final int y, final int u, final int v, final int width, final int height, final Operation<Void> original) {
         if (!EuphoriaComponent.isOutOfAstralPlane(MinecraftClient.getInstance().cameraEntity)) {
-            this.drawAstralIcon(matrices, x, y, 9, 9, 9, 9);
+            this.drawAstralIcon(matrices, x, y, 9, 9);
         }
         else {
             original.call(hud, matrices, x, y, u, v, width, height);
@@ -72,28 +70,28 @@ public abstract class InGameHudMixin extends DrawableHelper
     }
 
     @Unique
-    private void drawAstralIcon(final MatrixStack matrices, final int x, final int y, final int u, final int v, final int width, final int height) {
+    private void drawAstralIcon(final MatrixStack matrices, final int x, final int y, final int u, final int v) {
         EuphoricsClient.ASTRAL_ICON.time.set(EuphoricsClient.ticks + MinecraftClient.getInstance().getTickDelta());
         final ManagedCoreShader shader = EuphoricsClient.ASTRAL_ICON.shader;
         Objects.requireNonNull(shader);
-        RenderSystem.setShader((Supplier)shader::getProgram);
+        RenderSystem.setShader(shader::getProgram);
         RenderSystem.setShaderTexture(0, InGameHudMixin.ASTRAL_PLANE_ICONS);
         final BufferBuilder bufferBuilder = Tessellator.getInstance().getBuffer();
         bufferBuilder.begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_TEXTURE);
         final Matrix4f matrix = matrices.peek().getPositionMatrix();
-        final float x2 = (float)(x + width);
-        final float y2 = (float)(y + height);
+        final float x2 = (float)(x + 9);
+        final float y2 = (float)(y + 9);
         final float z = (float)this.getZOffset();
         final float u2 = u / 256.0f;
-        final float u3 = (u + width) / 256.0f;
+        final float u3 = (u + 9) / 256.0f;
         final float v2 = v / 256.0f;
-        final float v3 = (v + height) / 256.0f;
+        final float v3 = (v + 9) / 256.0f;
         bufferBuilder.vertex(matrix, (float)x, y2, z).texture(u2, v3).next();
         bufferBuilder.vertex(matrix, x2, y2, z).texture(u3, v3).next();
         bufferBuilder.vertex(matrix, x2, (float)y, z).texture(u3, v2).next();
         bufferBuilder.vertex(matrix, (float)x, (float)y, z).texture(u2, v2).next();
         BufferRenderer.drawWithShader(bufferBuilder.end());
-        RenderSystem.setShader((Supplier) GameRenderer::getPositionTexShader);
+        RenderSystem.setShader( GameRenderer::getPositionTexShader);
         RenderSystem.setShaderTexture(0, InGameHudMixin.GUI_ICONS_TEXTURE);
     }
 

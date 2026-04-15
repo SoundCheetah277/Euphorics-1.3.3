@@ -19,7 +19,7 @@ public class ShadeEntityModel extends AnimatedGeoModel<ShadeEntity>
     public void setCustomAnimations(final ShadeEntity animatable, final int instanceId, final AnimationEvent animationEvent) {
         super.setCustomAnimations(animatable, instanceId, animationEvent);
         final IBone head = this.getAnimationProcessor().getBone("head");
-        final EntityModelData extraData = animationEvent.getExtraDataOfType(EntityModelData.class).get(0);
+        final EntityModelData extraData = (EntityModelData) animationEvent.getExtraDataOfType(EntityModelData.class).get(0);
         if (head != null) {
             head.setRotationX(extraData.headPitch * 0.017453292f);
             head.setRotationY(extraData.netHeadYaw * 0.017453292f);

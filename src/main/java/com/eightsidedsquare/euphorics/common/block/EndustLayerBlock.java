@@ -1,7 +1,6 @@
 package com.eightsidedsquare.euphorics.common.block;
 
 import com.google.common.collect.*;
-import com.mojang.authlib.properties.Property;
 import net.minecraft.block.*;
 import net.minecraft.entity.FallingBlockEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
@@ -42,7 +41,7 @@ public class EndustLayerBlock extends FallingBlock
     }
 
     protected void appendProperties(final StateManager.Builder<Block, BlockState> builder) {
-        builder.add(new Property[] { EndustLayerBlock.LAYERS });
+        builder.add(EndustLayerBlock.LAYERS);
     }
 
     public VoxelShape getOutlineShape(final BlockState state, final BlockView world, final BlockPos pos, final ShapeContext context) {

@@ -65,14 +65,17 @@ public class ShadeEntity extends HostileEntity implements IAnimatable
 
     protected void initGoals() {
         this.goalSelector.add(1, new SwimGoal(this) {
+            @Override
             public boolean canStart() {
                 return super.canStart() && this.mob.getTarget() == null;
             }
 
+            @Override
             public boolean shouldContinue() {
                 return super.shouldContinue() && this.mob.getTarget() == null;
             }
 
+            @Override
             public void tick() {
                 if (this.mob.getTarget() != null) {
                     this.stop();

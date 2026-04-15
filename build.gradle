@@ -20,7 +20,9 @@ repositories {
 		name = 'GeckoLib'
 		url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
 	}
-	mavenCentral()
+    maven { url = "https://www.cursemaven.com" }
+    maven { url = "https://api.modrinth.com/maven" }
+    mavenCentral()
 }
 
 dependencies {
@@ -36,8 +38,9 @@ dependencies {
 	modImplementation "io.github.ladysnake:satin:${satin_version}"
 	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${cca_version}"
 	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${cca_version}"
-	modImplementation("software.bernie.geckolib:geckolib-fabric-1.19:${geckolib_version}")
-//	modImplementation("io.github.moriyashiine:enchancement:enchancement-1.19-14")
+	modImplementation "software.bernie.geckolib:geckolib-fabric-1.19:${geckolib_version}"
+    modImplementation "org.joml:joml:1.10.5"
+    //modImplementation files("libs/enchancement-1.19-19 (1).jar")
 }
 
 processResources {

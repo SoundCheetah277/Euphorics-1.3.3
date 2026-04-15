@@ -15,6 +15,6 @@ public abstract class NearestPlayersSensorMixin
 {
     @WrapOperation(method = { "sense" }, at = { @At(value = "INVOKE", target = "Ljava/util/stream/Stream;filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;", ordinal = 2) })
     private Stream<?> filterOutAstralPlanePlayers(final Stream<?> stream, final Predicate<?> predicate, final Operation<Stream<?>> original) {
-        return ((Stream)original.call(new Object[] { stream, predicate })).filter(obj -> EuphoriaComponent.isOutOfAstralPlane((Entity)obj));
+        return (original.call(stream, predicate)).filter(obj -> EuphoriaComponent.isOutOfAstralPlane((Entity)obj));
     }
 }

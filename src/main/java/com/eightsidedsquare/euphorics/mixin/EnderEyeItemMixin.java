@@ -31,6 +31,6 @@ public abstract class EnderEyeItemMixin
 
     @WrapOperation(method = { "use" }, at = { @At(value = "INVOKE", target = "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z") })
     private boolean doNotThrowEnderEyeWhenUsedOnScrapedEndPortalFrame(final BlockState state, final Block block, final Operation<Boolean> original) {
-        return original.call(new Object[] { state, block }) || state.isOf(EuphoricsBlocks.SCRAPED_END_PORTAL_FRAME);
+        return original.call(state, block) || state.isOf(EuphoricsBlocks.SCRAPED_END_PORTAL_FRAME);
     }
 }

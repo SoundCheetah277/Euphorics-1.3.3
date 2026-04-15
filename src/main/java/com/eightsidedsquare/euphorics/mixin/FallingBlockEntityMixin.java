@@ -14,11 +14,11 @@ import org.spongepowered.asm.mixin.injection.*;
 public abstract class FallingBlockEntityMixin extends Entity
 {
     public FallingBlockEntityMixin(final EntityType<?> type, final World world) {
-        super((EntityType)type, world);
+        super(type, world);
     }
 
     @Inject(method = { "tick" }, at = { @At("HEAD") })
     public void tick(final CallbackInfo ci) {
-        ((ReverseGravityComponent)EuphoricsEntityComponents.REVERSE_GRAVITY.get((Object)this)).tick();
+        (EuphoricsEntityComponents.REVERSE_GRAVITY.get(this)).tick();
     }
 }

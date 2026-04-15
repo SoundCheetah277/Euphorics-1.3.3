@@ -8,6 +8,7 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
@@ -30,7 +31,7 @@ public abstract class LockableContainerBlockEntityMixin extends BlockEntity impl
         if (this.getWorld() != null && this.containsAny(stack -> stack.isOf(EuphoricsItems.RAW_ENDUST))) {
             final BlockState state = this.getCachedState();
             final World world = this.getWorld();
-            final Direction d = state.getProperties().stream().filter(property -> property.equals((Object)Properties.FACING) || property.equals((Object)Properties.HORIZONTAL_FACING)).findFirst().flatMap(property -> Optional.ofNullable((Direction)state.get(property))).orElse(Direction.UP);
+            final Direction d = state.getProperties().stream().filter(property -> property.equals(Properties.FACING) || property.equals(Properties.HORIZONTAL_FACING)).findFirst().flatMap(property -> Optional.ofNullable((Direction)state.get(property))).orElse(Direction.UP);
             if (d != Direction.DOWN) {
                 final int size = this.size();
                 final List<ItemStack> found = new ArrayList<ItemStack>();
@@ -42,8 +43,8 @@ public abstract class LockableContainerBlockEntityMixin extends BlockEntity impl
                     }
                 }
                 final World World;
-                final Direction class_1938;
-                found.forEach(stack -> World.spawnEntity(new ItemEntity(World, this.getPos().getX() + 0.5 + class_1938.getOffsetX() * 0.65, this.getPos().getY() + 0.5 + class_1938.getOffsetY() * 0.65, this.getPos().getZ() + 0.5 + class_1938.getOffsetZ() * 0.65, stack)));
+                final Direction direction;
+                found.forEach(stack -> World.spawnEntity(new ItemEntity(World, this.getPos().getX() + 0.5 + direction.getOffsetX() * 0.65, this.getPos().getY() + 0.5 + direction.getOffsetY() * 0.65, this.getPos().getZ() + 0.5 + direction.getOffsetZ() * 0.65, stack)));
             }
         }
     }

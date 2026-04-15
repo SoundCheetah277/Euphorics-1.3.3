@@ -1,5 +1,5 @@
 package com.eightsidedsquare.euphorics.mixin.compat;
-
+/*
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -35,4 +35,4 @@ public class Enchancement$BouncySquaredMixin
     private <T extends ParticleEffect> boolean euphorics$cancelBounceParticles(final ServerWorld instance, final T particle, final double x, final double y, final double z, final int count, final double deltaX, final double deltaY, final double deltaZ, final double speed) {
         return EuphoriaComponent.isOutOfAstralPlane(this);
     }
-}
+}*/

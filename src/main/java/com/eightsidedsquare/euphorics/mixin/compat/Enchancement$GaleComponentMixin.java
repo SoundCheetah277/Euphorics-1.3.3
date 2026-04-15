@@ -4,14 +4,14 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import org.spongepowered.asm.mixin.*;
-import moriyashiine.enchancement.common.component.entity.*;
+//import moriyashiine.enchancement.common.component.entity.*;
 import org.spongepowered.asm.mixin.injection.callback.*;
 import com.eightsidedsquare.euphorics.cca.*;
 import org.spongepowered.asm.mixin.injection.*;
 import net.minecraft.*;
 import com.llamalad7.mixinextras.injector.v2.*;
 
-@Mixin({ GaleComponent.class })
+//@Mixin({ GaleComponent.class })
 public class Enchancement$GaleComponentMixin
 {
     @Inject(method = { "addGaleParticles" }, at = { @At("HEAD") }, cancellable = true)

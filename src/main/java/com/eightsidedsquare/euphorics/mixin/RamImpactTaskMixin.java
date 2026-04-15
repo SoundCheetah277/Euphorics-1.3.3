@@ -4,12 +4,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.ai.brain.task.RamImpactTask;
 import net.minecraft.entity.passive.GoatEntity;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.callback.*;
 import com.eightsidedsquare.euphorics.core.*;
@@ -27,7 +25,7 @@ public abstract class RamImpactTaskMixin
         if (state.isOf(EuphoricsBlocks.CRYSTALLIZED_ENDUST_BLOCK)) {
             world.breakBlock(pos, false);
             final int count = goat.getRandom().nextBetween(7, 9);
-            Block.dropStack((World)world, pos, new ItemStack((ItemConvertible)EuphoricsItems.CRYSTALLIZED_ENDUST, count));
+            Block.dropStack(world, pos, new ItemStack(EuphoricsItems.CRYSTALLIZED_ENDUST, count));
         }
     }
 }

@@ -1,6 +1,6 @@
 package com.eightsidedsquare.euphorics.mixin.compat;
 
-import moriyashiine.enchancement.common.component.entity.*;
+//import moriyashiine.enchancement.common.component.entity.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.sound.SoundEvent;
@@ -11,7 +11,7 @@ import com.llamalad7.mixinextras.injector.v2.*;
 import org.spongepowered.asm.mixin.injection.*;
 import net.minecraft.*;
 
-@Mixin({ DashComponent.class })
+//@Mixin({ DashComponent.class })
 public class Enchancement$DashComponentMixin
 {
     @Shadow

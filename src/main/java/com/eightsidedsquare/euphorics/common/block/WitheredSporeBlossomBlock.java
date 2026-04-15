@@ -1,6 +1,5 @@
 package com.eightsidedsquare.euphorics.common.block;
 
-import com.mojang.authlib.properties.Property;
 import net.minecraft.block.*;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
@@ -54,7 +53,6 @@ public class WitheredSporeBlossomBlock extends SporeBlossomBlock
                     if (!testState.getCollisionShape(world, testPos).isEmpty()) {
                         break;
                     }
-                    continue;
                 }
             }
         }
@@ -80,7 +78,7 @@ public class WitheredSporeBlossomBlock extends SporeBlossomBlock
     }
 
     protected void appendProperties(final StateManager.Builder<Block, BlockState> builder) {
-        builder.add(new Property[] { WitheredSporeBlossomBlock.WITHER });
+        builder.add(WitheredSporeBlossomBlock.WITHER);
     }
 
     static {

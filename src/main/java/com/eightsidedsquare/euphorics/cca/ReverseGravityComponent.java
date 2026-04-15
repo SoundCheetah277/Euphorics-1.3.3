@@ -15,14 +15,15 @@ import net.minecraft.particle.BlockStateParticleEffect;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import com.eightsidedsquare.euphorics.core.*;
-import java.util.*;
-import net.minecraft.*;
 import org.jetbrains.annotations.*;
+
+import java.util.List;
 
 public class ReverseGravityComponent implements AutoSyncedComponent
 {
@@ -51,13 +52,12 @@ public class ReverseGravityComponent implements AutoSyncedComponent
             final World world = this.entity.world;
             final BlockPos abovePos = this.entity.getBlockPos().up();
             final BlockState aboveState = world.getBlockState(abovePos);
-            final Entity entity2 = this.entity;
-            if (entity2 instanceof FallingBlockEntity fallingBlockEntity) {
+            if (this.entity instanceof FallingBlockEntity fallingBlockEntity) {
                 if (fallingBlockEntity.verticalCollision && !fallingBlockEntity.isOnGround()) {
                     final BlockState state = fallingBlockEntity.getBlockState();
                     final BlockPos pos = new BlockPos(fallingBlockEntity.getBlockX(), fallingBlockEntity.getY() + 0.949999988079071, fallingBlockEntity.getBlockZ());
                     final BlockState stateAtPos = world.getBlockState(pos);
-                    if (state.isOf(EuphoricsBlocks.RAW_ENDUST_LAYER) && stateAtPos.isOf(EuphoricsBlocks.RAW_ENDUST_LAYER) && (int)stateAtPos.get(Properties.LAYERS) < 8) {
+                    if (state.isOf(EuphoricsBlocks.RAW_ENDUST_LAYER) && stateAtPos.isOf(EuphoricsBlocks.RAW_ENDUST_LAYER) && stateAtPos.get(Properties.LAYERS) < 8) {
                         final int blockLayers = stateAtPos.get(Properties.LAYERS);
                         final int entityLayers = state.get(Properties.LAYERS);
                         world.setBlockState(pos, state.with(Properties.LAYERS, Math.min(8, entityLayers + blockLayers)));

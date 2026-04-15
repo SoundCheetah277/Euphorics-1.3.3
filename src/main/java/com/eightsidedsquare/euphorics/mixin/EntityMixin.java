@@ -19,7 +19,7 @@ public abstract class EntityMixin
 {
     @Inject(method = { "occludeVibrationSignals" }, at = { @At("HEAD") }, cancellable = true)
     private void occludeVibrationsIfInAstralPlane(final CallbackInfoReturnable<Boolean> cir) {
-        if (!EuphoriaComponent.isOutOfAstralPlane(this)) {
+        if (!EuphoriaComponent.isOutOfAstralPlane((Entity)(Object)this)) {
             cir.setReturnValue(true);
         }
     }
@@ -36,38 +36,38 @@ public abstract class EntityMixin
 
     @Inject(method = { "shouldSpawnSprintingParticles" }, at = { @At("RETURN") }, cancellable = true)
     private void cancelSprintParticlesForAstralPlanePlayers(final CallbackInfoReturnable<Boolean> cir) {
-        if (cir.getReturnValue() && !EuphoriaComponent.isOutOfAstralPlane(this)) {
+        if (cir.getReturnValue() && !EuphoriaComponent.isOutOfAstralPlane((Entity)(Object)this)) {
             cir.setReturnValue(false);
         }
     }
 
     @WrapWithCondition(method = { "fall" }, at = { @At(value = "INVOKE", target = "Lnet/minecraft/world/World;emitGameEvent(Lnet/minecraft/world/event/GameEvent;Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/world/event/GameEvent$Emitter;)V") })
     private boolean cancelFallGameEventForAstralPlanePlayers(final World world, final GameEvent event, final Vec3d emitterPos, final GameEvent.Emitter emitter) {
-        return EuphoriaComponent.isOutOfAstralPlane(this);
+        return EuphoriaComponent.isOutOfAstralPlane((Entity)(Object)this);
     }
 
     @WrapWithCondition(method = { "fall" }, at = { @At(value = "INVOKE", target = "Lnet/minecraft/block/Block;onLandedUpon(Lnet/minecraft/world/World;Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;F)V") })
     private boolean cancelLandEffectsForAstralPlanePlayers(final Block block, final World world, final BlockState state, final BlockPos pos, final Entity entity, final float fallDistance) {
-        return EuphoriaComponent.isOutOfAstralPlane(this);
+        return EuphoriaComponent.isOutOfAstralPlane((Entity)(Object)this);
     }
 
     @Inject(method = { "onSwimmingStart" }, at = { @At("HEAD") }, cancellable = true)
     private void cancelSwimEffects(final CallbackInfo ci) {
-        if (!EuphoriaComponent.isOutOfAstralPlane(this)) {
+        if (!EuphoriaComponent.isOutOfAstralPlane((Entity)(Object)this)) {
             ci.cancel();
         }
     }
 
     @Inject(method = { "playStepSound" }, at = { @At("HEAD") }, cancellable = true)
     private void cancelStepSounds(final BlockPos pos, final BlockState state, final CallbackInfo ci) {
-        if (!EuphoriaComponent.isOutOfAstralPlane(this)) {
+        if (!EuphoriaComponent.isOutOfAstralPlane((Entity)(Object)this)) {
             ci.cancel();
         }
     }
 
     @Inject(method = { "playSwimSound" }, at = { @At("HEAD") }, cancellable = true)
     private void cancelSwimSounds(final float volume, final CallbackInfo ci) {
-        if (!EuphoriaComponent.isOutOfAstralPlane(this)) {
+        if (!EuphoriaComponent.isOutOfAstralPlane((Entity)(Object)this)) {
             ci.cancel();
         }
     }

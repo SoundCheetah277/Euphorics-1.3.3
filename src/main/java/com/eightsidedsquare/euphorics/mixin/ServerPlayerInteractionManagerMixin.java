@@ -24,14 +24,14 @@ public abstract class ServerPlayerInteractionManagerMixin
     @WrapOperation(method = { "interactBlock" }, at = { @At(value = "INVOKE", target = "Lnet/minecraft/block/BlockState;onUse(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/hit/BlockHitResult;)Lnet/minecraft/util/ActionResult;") })
     private ActionResult cancelBlockInteractForAstralPlanePlayers(final BlockState state, final World world, final PlayerEntity player, final Hand hand, final BlockHitResult hit, final Operation<ActionResult> original) {
         if (!EuphoricsEntityComponents.EUPHORIA.get(player).isInAstralPlane()) {
-            return original.call(new Object[] { state, world, player, hand, hit });
+            return original.call(state, world, player, hand, hit);
         }
         return ActionResult.FAIL;
     }
 
     @WrapOperation(method = { "interactBlock" }, at = { @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/ItemCooldownManager;isCoolingDown(Lnet/minecraft/item/Item;)Z") })
     private boolean cancelUseOnBlockForAstralPlanePlayers(final ItemCooldownManager manager, final Item item, final Operation<Boolean> original, final ServerPlayerEntity player, final World world, final ItemStack stack, final Hand hand, final BlockHitResult hitResult) {
-        return original.call(new Object[] { manager, item }) || !EuphoriaComponent.isOutOfAstralPlane(player);
+        return original.call(manager, item) || !EuphoriaComponent.isOutOfAstralPlane(player);
     }
 
     @Inject(method = { "interactItem" }, at = { @At("HEAD") }, cancellable = true)

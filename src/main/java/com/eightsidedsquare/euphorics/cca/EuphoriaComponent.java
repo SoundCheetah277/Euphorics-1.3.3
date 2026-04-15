@@ -36,7 +36,7 @@ public class EuphoriaComponent implements AutoSyncedComponent
 
     public void tick() {
         if (this.lastUse - this.euphoriaTicks == 80) {
-            this.player.sendMessage((Text)Text.translatable("astral_plane_jump.ready"), true);
+            this.player.sendMessage(Text.translatable("astral_plane_jump.ready"), true);
         }
         if (this.euphoriaTicks > 0) {
             --this.euphoriaTicks;
@@ -58,8 +58,7 @@ public class EuphoriaComponent implements AutoSyncedComponent
             --this.forcedAstralPlaneTicks;
         }
         final World world = this.player.world;
-        if (world instanceof ServerWorld) {
-            final ServerWorld serverWorld = (ServerWorld)world;
+        if (world instanceof ServerWorld serverWorld) {
             if (isInAstralPlane(this.player) && this.player.getRandom().nextFloat() < 0.06f) {
                 serverWorld.spawnParticles((ParticleEffect)EuphoricsParticles.ASTRAL_PLANE, this.player.getX(), this.player.getY() + this.player.getHeight() / 2.0f, this.player.getZ(), 1, 0.125, 0.325, 0.125, 0.025);
             }
@@ -71,17 +70,14 @@ public class EuphoriaComponent implements AutoSyncedComponent
     }
 
     public static boolean isOutOfAstralPlane(@Nullable final Entity entity) {
-        if (entity instanceof PlayerEntity) {
-            final PlayerEntity player = (PlayerEntity)entity;
-            if (isInAstralPlane(player)) {
-                return false;
-            }
+        if (entity instanceof PlayerEntity player) {
+            return !isInAstralPlane(player);
         }
         return true;
     }
 
     public static boolean isInAstralPlane(@NotNull final PlayerEntity player) {
-        final EuphoriaComponent component = (EuphoriaComponent)EuphoricsEntityComponents.EUPHORIA.getNullable((Object)player);
+        final EuphoriaComponent component = EuphoricsEntityComponents.EUPHORIA.getNullable(player);
         return component != null && (component.isInAstralPlane() || component.getForcedAstralPlaneTicks() > 0);
     }
 

@@ -15,17 +15,17 @@ import com.eightsidedsquare.euphorics.cca.*;
 public abstract class ItemEntityMixin extends Entity
 {
     public ItemEntityMixin(final EntityType<?> type, final World world) {
-        super((EntityType)type, world);
+        super(type, world);
     }
 
     @Inject(method = { "tick" }, at = { @At("HEAD") })
     public void tick(final CallbackInfo ci) {
-        ((ReverseGravityComponent)EuphoricsEntityComponents.REVERSE_GRAVITY.get((Object)this)).tick();
+        (EuphoricsEntityComponents.REVERSE_GRAVITY.get(this)).tick();
     }
 
     @Inject(method = { "onPlayerCollision" }, at = { @At("HEAD") }, cancellable = true)
     private void astralPlanePlayersDoNotPickUpItems(final PlayerEntity player, final CallbackInfo ci) {
-        if (!EuphoriaComponent.isOutOfAstralPlane((Entity)player)) {
+        if (!EuphoriaComponent.isOutOfAstralPlane(player)) {
             ci.cancel();
         }
     }
